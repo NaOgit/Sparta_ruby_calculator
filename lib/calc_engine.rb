@@ -126,7 +126,7 @@ class CalcEngine
   end
 
   def bmi_imperial(weight, height)
-    (weight/(height**2))*703.round(1)
+    ((weight/(height**2))*703).round(1)
   end
 
   def trip_calc(distance, mpg, cost_per_gal, speed)

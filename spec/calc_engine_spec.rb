@@ -8,6 +8,11 @@ describe "Testing the calc engine" do
   end
 
   it "should add two numbers together" do
-    expect(@calc.add_two_numbers(1,1)).to eq(2)
+    expect(@calc.addition(1,1)).to eq(2)
   end
+
+  it "should subtract two numbers" do
+    expect(@calc.subtraction(1,1)).to eq(0)
+  end
+
 end

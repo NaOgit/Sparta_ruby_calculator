@@ -40,7 +40,7 @@ describe "Testing the calc engine" do
   end
 
   it "should calculate trip cost and time" do
-    expect(@calc.trip_calc(20, 60, 4, 60)).to eq(0.3, 80.0)
+    expect(@calc.trip_calc(20, 60, 4, 60)).to eq("Your trip will take 0.3 hrs and cost £80.0")
   end
 
 end

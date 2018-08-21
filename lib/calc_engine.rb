@@ -64,7 +64,7 @@ class CalcEngine
         puts "Enter your height in m"
         height = gets.chomp.to_f
         puts "------------"
-        puts bmi_metric(weight, height).round(1)
+        puts bmi_metric(weight, height)
         puts "------------"
       end
       if option == "i"
@@ -74,7 +74,7 @@ class CalcEngine
         puts "Enter your height in inch"
         height = gets.chomp.to_f
         puts "------------"
-        puts bmi_imperial(weight, height).round(1)
+        puts bmi_imperial(weight, height)
         puts "------------"
       end
     end
@@ -122,11 +122,11 @@ class CalcEngine
   end
 
   def bmi_metric(weight, height)
-    weight/(height**2)
+    (weight/(height**2)).round(1)
   end
 
   def bmi_imperial(weight, height)
-    (weight/(height**2))*703
+    (weight/(height**2))*703.round(1)
   end
 
   def trip_calc(distance, mpg, cost_per_gal, speed)
@@ -136,5 +136,5 @@ class CalcEngine
   end
 end
 
-calc = CalcEngine.new()
-calc.run_calculator
+# calc = CalcEngine.new()
+# calc.run_calculator

@@ -26,7 +26,7 @@ class CalcEngine
         puts division(num1, num2)
       end
       puts "------------"
-      end
+    end
 
     if user_choice == "a"
       puts "------------"
@@ -94,7 +94,6 @@ class CalcEngine
       puts trip_calc(distance, mpg, cost_per_gal, speed)
       puts "------------"
     end
-
   end
 
   def addition(num1, num2)
@@ -122,15 +121,15 @@ class CalcEngine
   end
 
   def bmi_metric(weight, height)
-    (weight/(height**2)).round(1)
+    (weight.to_f/(height.to_f**2)).round(1)
   end
 
   def bmi_imperial(weight, height)
-    ((weight/(height**2))*703).round(1)
+    ((weight.to_f/(height.to_f**2))*703).round(1)
   end
 
   def trip_calc(distance, mpg, cost_per_gal, speed)
-    time = distance / speed
+    time = distance.to_f / speed.to_f
     cost = cost_per_gal*distance
     return "Your trip will take #{time.round(1)} hrs and cost £#{cost.round(2)}"
   end

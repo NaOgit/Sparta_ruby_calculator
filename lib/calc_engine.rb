@@ -8,7 +8,7 @@ class CalcEngine
     if user_choice == "b"
       puts "------------"
       puts "My Basic Calculator"
-      puts "Enter 2 numbers"
+      puts "Enter 2 numbers and an operator in between"
       # Ask user to input numbers
       num1 = gets.chomp.to_f
       operator = gets.chomp

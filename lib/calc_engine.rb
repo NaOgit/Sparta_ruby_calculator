@@ -145,5 +145,5 @@ class CalcEngine
   end
 end
 
-# calc = CalcEngine.new()
-# calc.run_calculator
+calc = CalcEngine.new()
+calc.run_calculator

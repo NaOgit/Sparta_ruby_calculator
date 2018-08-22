@@ -9,25 +9,30 @@ class CalcEngine
       puts "------------"
       puts "My Basic Calculator"
       puts "Enter 2 numbers"
+      # Ask user to input numbers
       num1 = gets.chomp.to_f
       operator = gets.chomp
       num2 = gets.chomp.to_f
       puts "------------"
+      # If user input +
       if operator == "+"
         puts addition(num1, num2)
       end
+      # if user input -
       if operator == "-"
         puts subtraction(num1, num2)
       end
+      # if user input *
       if operator == "*"
         puts multiplication(num1, num2)
       end
+      # if user input /
       if operator == "/"
         puts division(num1, num2)
       end
       puts "------------"
     end
-
+    # If user want to do advance calc
     if user_choice == "a"
       puts "------------"
       puts "My Advance Calculator"
@@ -39,6 +44,7 @@ class CalcEngine
         num1 = gets.chomp.to_i
         power = gets.chomp.to_i
         puts "------------"
+        # Do indices
         puts advance_power(num1, power).round(2)
         puts "------------"
       end
@@ -47,6 +53,7 @@ class CalcEngine
         puts "Enter your number"
         num1 = gets.chomp.to_f
         puts "------------"
+        # Square numbers
         puts advance_sqroot(num1).round(2)
         puts "------------"
       end
@@ -64,6 +71,7 @@ class CalcEngine
         puts "Enter your height in m"
         height = gets.chomp.to_f
         puts "------------"
+        # Calculate BMI using the metric system
         puts bmi_metric(weight, height)
         puts "------------"
       end
@@ -74,6 +82,7 @@ class CalcEngine
         puts "Enter your height in inch"
         height = gets.chomp.to_f
         puts "------------"
+        # Calculate BMI using the imperial system
         puts bmi_imperial(weight, height)
         puts "------------"
       end
@@ -91,43 +100,44 @@ class CalcEngine
       puts "Enter your speed"
       speed = gets.chomp.to_f
       puts "------------"
+      # Calculate the trip
       puts trip_calc(distance, mpg, cost_per_gal, speed)
       puts "------------"
     end
   end
-
+  # Add two numbers
   def addition(num1, num2)
     num1 + num2
   end
-
+  # Do subtraction
   def subtraction(num1, num2)
     num1 - num2
   end
-
+  # Do multiplication
   def multiplication(num1, num2)
     num1 * num2
   end
-
+  # DO division
   def division(num1, num2)
     num1/num2
   end
-
+  # Do indices
   def advance_power(num1, power)
     num1**power
   end
-
+  # Square root number
   def advance_sqroot(num1)
     Math.sqrt(num1)
   end
-
+  # Calculate BMI using the metric system
   def bmi_metric(weight, height)
     (weight.to_f/(height.to_f**2)).round(1)
   end
-
+  # Calculate BMI using the imperial system
   def bmi_imperial(weight, height)
     ((weight.to_f/(height.to_f**2))*703).round(1)
   end
-
+  # Calculate time and cost of a journey
   def trip_calc(distance, mpg, cost_per_gal, speed)
     time = distance.to_f / speed.to_f
     cost = cost_per_gal*distance
